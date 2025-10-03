@@ -10,11 +10,11 @@ class Main {
     Challenge 1:
     1) Create the variables, ask the user for the variable values, write the equation in file EQ1-act6 and display the equation value.
 */
-System.out.printin("Enter in x");
+System.out.println("Enter in x");
 double x = Input.readDouble();
 double y = 0;
 y = Math.pow(x,7);
-System.out.printin(y);
+System.out.println(y);
 
 
 
