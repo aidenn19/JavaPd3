@@ -29,11 +29,11 @@ class Main {
 
     //substituion
     String encodedMsg1 = subEncryption(file,sub,sub2);
-    //Input.writeFile("Encode1.txt",encodedMsg1);
+    Input.writeFile("Encode1.txt",encodedMsg1);
 
     // caesar cipher
     String encodedMsg2 = encode(encodedMsg1);
-    //Input.writeFile("Encode2.txt",encodedMsg2);
+    Input.writeFile("Encode2.txt",encodedMsg2);
 
     // reverse
     String encodedMsg3 = reverse(encodedMsg2);
@@ -43,9 +43,7 @@ class Main {
     // decoding message
     //String file2 = Input.readFile("Encode1.txt");
     
-   // String decodedMsg1 = reverse(file2);
-    //Input.writeFile("Decode1.txt", decodedMsg1);
-    
+   
     //String decodedMsg2 = decode(decodedMsg1);
     //Input.writeFile("Decode2.txt", decodedMsg2);
     
@@ -60,6 +58,10 @@ class Main {
     String bld ="";
     for(int x=0; x<= txt.length()-1; x++){
       bld = txt.charAt(x) + bld;
+      print(bld);
+      String decodedMsg1 = reverse( "Encode3.txt");
+    Input.writeFile("Decode1.txt", decodedMsg1);
+    
     }
     return bld;
   }
@@ -79,6 +81,8 @@ String encode(String txt){
     if(c >= 'a' && c <= 'z'){
       c = (char)(c + pattern[p]);
       p = (p + 1) % pattern.length;
+      String encodedMsg2 = encode("Encode3.txt");
+    Input.writeFile("Encode2.txt",encodedMsg2);
     }
     bld += c;
   }
@@ -101,6 +105,8 @@ String subEncryption(String s, char[] sub, char[] sub2){
   for(int i=0;i<s.length();i++){
     char c = s.charAt(i);
     boolean replaced = false;
+     String encodedMsg1 = subEncryption("Encode3.txt",sub,sub2);
+    Input.writeFile("Encode3.txt",encodedMsg1);
 
     for(int j=0;j<sub.length;j++){
       if(c == sub[j]){
