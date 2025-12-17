@@ -41,12 +41,12 @@ class Main {
 
     
     // decoding message
-    String file2 = Input.readFile("Encode1.txt");
+    //String file2 = Input.readFile("Encode1.txt");
     
-    String decodedMsg1 = reverse(file2);
+   // String decodedMsg1 = reverse(file2);
     //Input.writeFile("Decode1.txt", decodedMsg1);
     
-    String decodedMsg2 = decode(decodedMsg1);
+    //String decodedMsg2 = decode(decodedMsg1);
     //Input.writeFile("Decode2.txt", decodedMsg2);
     
     // String decodedMsg3 = subEncryption(decodedMsg2, sub2, sub);
