@@ -49,25 +49,26 @@ class Main {
     String decodedMsg2 = decode(decodedMsg1);
     //Input.writeFile("Decode2.txt", decodedMsg2);
     
-     String decodedMsg3 = subEncryption(decodedMsg2, sub2, sub);
+    // String decodedMsg3 = subEncryption(decodedMsg2, sub2, sub);
     //Input.writeFile("Decode1.txt", decodedMsg3);
     
     
   }
-  // Level 1 reverse string
+
 // Level 1 reverse string
-String reverse(String txt){
-  int mid = txt.length()/2;
-  String first = txt.substring(0, mid);
-  String second = txt.substring(mid);
-  String bld = second + first;
-  return bld;
-}
+ String reverse(String txt){
+    String bld ="";
+    for(int x=0; x<= txt.length()-1; x++){
+      bld = txt.charAt(x) + bld;
+    }
+    return bld;
+  }
+
 
   
   
-  //Level 2 Cipher encoding with no wrapping
- //Level 2 Cipher encoding with no wrapping
+ 
+ //Level 2 Cipher encoding 
 String encode(String txt){
   String bld="";
   int[] pattern = {3,5,7,5,3};
@@ -92,7 +93,7 @@ String encode(String txt){
     return bld;
   }
 
-  // Level 3 Substituion encoding
+ 
   // Level 3 Substituion encoding
 String subEncryption(String s, char[] sub, char[] sub2){
   String bld="";
@@ -119,4 +120,3 @@ String subEncryption(String s, char[] sub, char[] sub2){
 
   }
 
-}
